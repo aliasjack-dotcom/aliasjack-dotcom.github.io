@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My videos RCIM — découpage et publication de vidéos courtes</title>
+<meta name="description" content="My videos RCIM découpe des vidéos longues en extraits courts et les publie sur la chaîne YouTube de son propriétaire. Application de bureau, installée sur l'ordinateur de l'utilisateur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --encre:#0E2233;
+    --encre-douce:#4A6075;
+    --papier:#F2F5F7;
+    --papier-creux:#E4EBEF;
+    --sarcelle:#0F7E7E;
+    --ambre:#C98416;
+    --trait:#C8D5DD;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--papier);
+    color:var(--encre);
+    font-family:"Newsreader",Georgia,"Times New Roman",serif;
+    font-size:19px;
+    line-height:1.62;
+  }
+  .page{max-width:40rem;margin:0 auto;padding:0 1.5rem 6rem}
+  header{padding:4.5rem 0 0}
+  .nom{
+    font-size:1rem;font-weight:600;letter-spacing:.01em;
+    color:var(--sarcelle);margin:0 0 3.5rem;
+  }
+  h1{
+    font-size:2.6rem;line-height:1.14;font-weight:500;
+    margin:0 0 1.1rem;letter-spacing:-.015em;max-width:15ch;
+  }
+  .chapeau{font-size:1.18rem;color:var(--encre-douce);margin:0 0 3rem;max-width:34ch}
+
+  /* Le ruban : une heure de parole, trois moments qui valent la peine. */
+  .ruban{margin:0 0 .9rem}
+  .piste{
+    display:flex;height:4.25rem;border:1px solid var(--trait);
+    background:var(--papier-creux);border-radius:3px;overflow:hidden;
+  }
+  .piste span{display:block;height:100%}
+  .creux{flex:7}
+  .garde{flex:2;background:var(--sarcelle);position:relative}
+  .garde::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:3px;background:var(--ambre);
+  }
+  .legende{
+    display:flex;justify-content:space-between;
+    font-size:.85rem;color:var(--encre-douce);margin:0 0 3.5rem;
+  }
+
+  h2{
+    font-size:1.35rem;font-weight:600;margin:3rem 0 .7rem;letter-spacing:-.01em;
+  }
+  p{margin:0 0 1.1rem}
+  ul{margin:0 0 1.1rem;padding-left:1.1rem}
+  li{margin:0 0 .45rem}
+  a{color:var(--sarcelle);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--ambre);outline-offset:3px;border-radius:2px}
+  .encadre{
+    border-left:3px solid var(--ambre);padding:.1rem 0 .1rem 1.1rem;
+    margin:2rem 0;color:var(--encre-douce);
+  }
+  footer{
+    margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--trait);
+    font-size:.92rem;color:var(--encre-douce);
+  }
+  footer p{margin:0 0 .4rem}
+  @media (max-width:40rem){
+    body{font-size:18px}
+    h1{font-size:2.05rem}
+    header{padding-top:3rem}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="nom">My videos RCIM</p>
+    <h1>Une heure de vidéo contient rarement une heure d&rsquo;intéressant.</h1>
+    <p class="chapeau">
+      My videos RCIM transcrit une vidéo longue, repère les passages qui se
+      suffisent à eux-mêmes, et en fait des extraits verticaux sous-titrés.
+    </p>
+  </header>
+
+  <div class="ruban">
+    <div class="piste" role="img" aria-label="Une vidéo longue dont trois courts passages sont retenus.">
+      <span class="creux"></span><span class="garde"></span>
+      <span class="creux"></span><span class="garde"></span>
+      <span class="creux"></span><span class="garde"></span>
+      <span class="creux"></span>
+    </div>
+  </div>
+  <p class="legende"><span>Vidéo source</span><span>Passages retenus</span></p>
+
+  <h2>Ce que fait l&rsquo;application</h2>
+  <p>
+    Elle est installée sur l&rsquo;ordinateur de son propriétaire et travaille
+    sur les fichiers vidéo qui s&rsquo;y trouvent. Le traitement se déroule en
+    quatre temps.
+  </p>
+  <ul>
+    <li>La bande son est transcrite, avec l&rsquo;horodatage de chaque mot.</li>
+    <li>Les passages les plus marquants sont repérés et découpés sur des phrases entières.</li>
+    <li>Chaque extrait est recadré au format vertical, sous-titré, et un titre lui est proposé.</li>
+    <li>L&rsquo;extrait peut ensuite être publié sur la chaîne YouTube de son propriétaire.</li>
+  </ul>
+
+  <h2>Pourquoi elle demande l&rsquo;accès à YouTube</h2>
+  <p>
+    La dernière étape seulement nécessite une autorisation. L&rsquo;application
+    demande deux permissions&nbsp;: envoyer une vidéo sur la chaîne de la
+    personne connectée, et lire les informations de cette chaîne pour savoir
+    où l&rsquo;envoi a abouti.
+  </p>
+  <p>
+    Elle n&rsquo;accède à aucune autre donnée du compte Google, ne consulte
+    aucune chaîne tierce, et ne modifie ni ne supprime les vidéos existantes.
+  </p>
+
+  <div class="encadre">
+    <p>
+      Rien n&rsquo;est envoyé vers un serveur qui nous appartiendrait&nbsp;:
+      l&rsquo;application communique directement avec Google depuis
+      l&rsquo;ordinateur de son utilisateur.
+    </p>
+  </div>
+
+  <h2>À qui elle s&rsquo;adresse</h2>
+  <p>
+    Aux créateurs qui tournent du format long — entretiens, enseignements,
+    conférences — et veulent en tirer des formats courts sans repasser des
+    heures au montage.
+  </p>
+
+  <h2>Vos données</h2>
+  <p>
+    La <a href="privacy.html">politique de confidentialité</a> détaille les
+    données consultées, leur usage, leur stockage et la manière de retirer
+    l&rsquo;autorisation à tout moment.
+  </p>
+
+  <footer>
+    <p>My videos RCIM — application de bureau, usage personnel.</p>
+    <p>Contact&nbsp;: <a href="mailto:uminefreeta@gmail.com">uminefreeta@gmail.com</a></p>
+    <p><a href="privacy.html">Politique de confidentialité</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
