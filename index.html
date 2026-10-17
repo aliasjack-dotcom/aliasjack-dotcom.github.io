@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My videos RCIM — découpage et publication de vidéos courtes</title>
-<meta name="description" content="My videos RCIM découpe des vidéos longues en extraits courts et les publie sur la chaîne YouTube de son propriétaire. Application de bureau, installée sur l'ordinateur de l'utilisateur.">
+<title>My videos RCIM – turning long videos into short clips and publishing them on YouTube</title>
+<meta name="description" content="My videos RCIM is a private desktop application that turns long videos into short vertical clips and publishes them on YouTube, using YouTube API Services.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
@@ -36,11 +36,9 @@
   }
   h1{
     font-size:2.6rem;line-height:1.14;font-weight:500;
-    margin:0 0 1.1rem;letter-spacing:-.015em;max-width:15ch;
+    margin:0 0 1.1rem;letter-spacing:-.015em;max-width:16ch;
   }
-  .chapeau{font-size:1.18rem;color:var(--encre-douce);margin:0 0 3rem;max-width:34ch}
-
-  /* Le ruban : une heure de parole, trois moments qui valent la peine. */
+  .chapeau{font-size:1.18rem;color:var(--encre-douce);margin:0 0 3rem;max-width:36ch}
   .ruban{margin:0 0 .9rem}
   .piste{
     display:flex;height:4.25rem;border:1px solid var(--trait);
@@ -56,7 +54,6 @@
     display:flex;justify-content:space-between;
     font-size:.85rem;color:var(--encre-douce);margin:0 0 3.5rem;
   }
-
   h2{
     font-size:1.35rem;font-weight:600;margin:3rem 0 .7rem;letter-spacing:-.01em;
   }
@@ -69,11 +66,17 @@
     border-left:3px solid var(--ambre);padding:.1rem 0 .1rem 1.1rem;
     margin:2rem 0;color:var(--encre-douce);
   }
+  .youtube{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-size:.95rem;color:var(--encre-douce);margin:0 0 .4rem;
+  }
+  .youtube svg{flex:none}
   footer{
     margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--trait);
     font-size:.92rem;color:var(--encre-douce);
   }
   footer p{margin:0 0 .4rem}
+  .liens a{margin-right:1rem;display:inline-block}
   @media (max-width:40rem){
     body{font-size:18px}
     h1{font-size:2.05rem}
@@ -86,74 +89,91 @@
 
   <header>
     <p class="nom">My videos RCIM</p>
-    <h1>Une heure de vidéo contient rarement une heure d&rsquo;intéressant.</h1>
+    <h1>An hour of video rarely holds an hour of highlights.</h1>
     <p class="chapeau">
-      My videos RCIM transcrit une vidéo longue, repère les passages qui se
-      suffisent à eux-mêmes, et en fait des extraits verticaux sous-titrés.
+      My videos RCIM transcribes a long video, finds the passages that stand
+      on their own, turns them into subtitled vertical clips, and publishes
+      them on YouTube.
     </p>
   </header>
 
   <div class="ruban">
-    <div class="piste" role="img" aria-label="Une vidéo longue dont trois courts passages sont retenus.">
+    <div class="piste" role="img" aria-label="A long video from which three short passages are kept.">
       <span class="creux"></span><span class="garde"></span>
       <span class="creux"></span><span class="garde"></span>
       <span class="creux"></span><span class="garde"></span>
       <span class="creux"></span>
     </div>
   </div>
-  <p class="legende"><span>Vidéo source</span><span>Passages retenus</span></p>
+  <p class="legende"><span>Source video</span><span>Kept passages</span></p>
 
-  <h2>Ce que fait l&rsquo;application</h2>
+  <h2>What the application does</h2>
   <p>
-    Elle est installée sur l&rsquo;ordinateur de son propriétaire et travaille
-    sur les fichiers vidéo qui s&rsquo;y trouvent. Le traitement se déroule en
-    quatre temps.
+    My videos RCIM is a desktop application for Windows. It is installed on
+    a single computer and works on the video files stored there.
   </p>
   <ul>
-    <li>La bande son est transcrite, avec l&rsquo;horodatage de chaque mot.</li>
-    <li>Les passages les plus marquants sont repérés et découpés sur des phrases entières.</li>
-    <li>Chaque extrait est recadré au format vertical, sous-titré, et un titre lui est proposé.</li>
-    <li>L&rsquo;extrait peut ensuite être publié sur la chaîne YouTube de son propriétaire.</li>
+    <li>The soundtrack is transcribed, with a timestamp for each word.</li>
+    <li>The strongest passages are found and cut on complete sentences.</li>
+    <li>Each clip is reframed to vertical format and subtitled. Titles and descriptions can be drafted with the help of AI tools, then reviewed before publishing.</li>
+    <li>Clips and ready-made videos are uploaded to the right YouTube channel at scheduled times.</li>
   </ul>
 
-  <h2>Pourquoi elle demande l&rsquo;accès à YouTube</h2>
+  <h2>Who uses it</h2>
   <p>
-    La dernière étape seulement nécessite une autorisation. L&rsquo;application
-    demande deux permissions&nbsp;: envoyer une vidéo sur la chaîne de la
-    personne connectée, et lire les informations de cette chaîne pour savoir
-    où l&rsquo;envoi a abouti.
+    The application is privately owned and operated by its developer only.
+    It is not sold, distributed or made available to anyone else.
   </p>
   <p>
-    Elle n&rsquo;accède à aucune autre donnée du compte Google, ne consulte
-    aucune chaîne tierce, et ne modifie ni ne supprime les vidéos existantes.
+    It publishes videos on YouTube channels owned by the developer, and on
+    the channels of content creators who entrust him with their own videos
+    and authorize him to publish them. Each creator keeps full ownership of
+    their channel and of their videos, and can withdraw this authorization at
+    any time. This service is currently free of charge.
+  </p>
+
+  <h2>Why it needs access to YouTube</h2>
+  <p>
+    My videos RCIM uses YouTube API Services. Only the publishing step needs
+    an authorization, given by the owner of each channel through Google
+    sign-in. The application asks for two permissions: uploading a video to
+    the authorized channel, and reading that channel&rsquo;s basic
+    information to confirm where the upload went.
+  </p>
+  <p>
+    It does not access any other data in the Google account, does not read
+    any other channel, and does not change or delete existing videos.
   </p>
 
   <div class="encadre">
     <p>
-      Rien n&rsquo;est envoyé vers un serveur qui nous appartiendrait&nbsp;:
-      l&rsquo;application communique directement avec Google depuis
-      l&rsquo;ordinateur de son utilisateur.
+      Nothing is sent to a server of ours: the application talks directly to
+      Google from the developer&rsquo;s computer.
     </p>
   </div>
 
-  <h2>À qui elle s&rsquo;adresse</h2>
+  <h2>Your data</h2>
   <p>
-    Aux créateurs qui tournent du format long — entretiens, enseignements,
-    conférences — et veulent en tirer des formats courts sans repasser des
-    heures au montage.
-  </p>
-
-  <h2>Vos données</h2>
-  <p>
-    La <a href="privacy.html">politique de confidentialité</a> détaille les
-    données consultées, leur usage, leur stockage et la manière de retirer
-    l&rsquo;autorisation à tout moment.
+    The <a href="privacy.html">Privacy Policy</a> explains what data is
+    accessed, how it is used and stored, and how to withdraw the
+    authorization at any time. Use of the application is governed by our
+    <a href="terms.html">Terms of Service</a> and by the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
   </p>
 
   <footer>
-    <p>My videos RCIM — application de bureau, usage personnel.</p>
-    <p>Contact&nbsp;: <a href="mailto:uminefreeta@gmail.com">uminefreeta@gmail.com</a></p>
-    <p><a href="privacy.html">Politique de confidentialité</a></p>
+    <p class="youtube">
+      <svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true"><rect width="22" height="16" rx="4" fill="#FF0000"/><path d="M9 4.5v7l6-3.5z" fill="#FFFFFF"/></svg>
+      Uses YouTube API Services
+    </p>
+    <p>My videos RCIM. Private desktop application.</p>
+    <p>Contact: <a href="mailto:alias.jack.id@gmail.com">alias.jack.id@gmail.com</a></p>
+    <p class="liens">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+    </p>
   </footer>
 
 </div>
