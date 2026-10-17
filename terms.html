@@ -1,110 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Service – My videos RCIM</title>
+<meta name="description" content="Terms of Service of My videos RCIM, a private desktop application using YouTube API Services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #f6f7f9;
-    --surface: #ffffff;
-    --text: #1d2433;
-    --muted: #5a6478;
-    --line: #dde1e8;
-    --accent: #2f5d8a;
-    color-scheme: light;
+  :root{
+    --encre:#0E2233;
+    --encre-douce:#4A6075;
+    --papier:#F2F5F7;
+    --sarcelle:#0F7E7E;
+    --ambre:#C98416;
+    --trait:#C8D5DD;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #12161d;
-      --surface: #1a2029;
-      --text: #e4e8ef;
-      --muted: #a2abbb;
-      --line: #2c3442;
-      --accent: #8db7e0;
-      color-scheme: dark;
-    }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--papier);color:var(--encre);
+    font-family:"Newsreader",Georgia,"Times New Roman",serif;
+    font-size:19px;line-height:1.62;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
-    font-size: 1.0625rem;
-    line-height: 1.7;
+  .page{max-width:40rem;margin:0 auto;padding:0 1.5rem 6rem}
+  header{padding:4.5rem 0 0}
+  .retour{
+    font-size:1rem;font-weight:600;color:var(--sarcelle);
+    display:inline-block;margin:0 0 3.5rem;text-decoration:none;
   }
-  main {
-    max-width: 44rem;
-    margin: 0 auto;
-    padding: 3rem 1.5rem 4rem;
+  .retour:hover{text-decoration:underline;text-underline-offset:3px}
+  h1{font-size:2.3rem;line-height:1.16;font-weight:500;margin:0 0 .5rem;letter-spacing:-.015em}
+  .date{color:var(--encre-douce);font-size:.95rem;margin:0 0 2.8rem}
+  h2{font-size:1.3rem;font-weight:600;margin:2.8rem 0 .7rem;letter-spacing:-.01em}
+  p{margin:0 0 1.1rem}
+  ul{margin:0 0 1.1rem;padding-left:1.1rem}
+  li{margin:0 0 .5rem}
+  a{color:var(--sarcelle);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:focus-visible{outline:2px solid var(--ambre);outline-offset:3px;border-radius:2px}
+  footer{
+    margin-top:4.5rem;padding-top:1.4rem;border-top:1px solid var(--trait);
+    font-size:.92rem;color:var(--encre-douce);
   }
-  header { border-bottom: 1px solid var(--line); padding-bottom: 1.5rem; margin-bottom: 2rem; }
-  h1 {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 2rem;
-    line-height: 1.2;
-    margin: 0 0 0.5rem;
-  }
-  h2 {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 1.15rem;
-    margin: 2.25rem 0 0.5rem;
-  }
-  p, li { margin: 0 0 0.9rem; }
-  ul { padding-left: 1.25rem; }
-  .meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
-  a { color: var(--accent); }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  footer {
-    margin-top: 3rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: 0.95rem;
+  footer p{margin:0 0 .4rem}
+  .liens a{margin-right:1rem;display:inline-block}
+  @media (max-width:40rem){
+    body{font-size:18px}h1{font-size:1.85rem}header{padding-top:3rem}
   }
 </style>
 </head>
 <body>
-<main>
+<div class="page">
+
   <header>
+    <a class="retour" href="index.html">My videos RCIM</a>
     <h1>Terms of Service</h1>
-    <p class="meta">My videos RCIM. Last updated: October 17, 2026.</p>
+    <p class="date">Effective from October 17, 2026</p>
   </header>
 
-  <h2>About the application</h2>
-  <p>My videos RCIM is a private desktop application for Windows, developed and operated by FIDELE NTSO BASSIGOUAGA, an independent developer based in France. It is used only by its developer, on his own computer, to upload and schedule original videos to YouTube channels that he owns. The application is not sold, distributed or offered to any third party.</p>
+  <h2>About the service</h2>
+  <p>
+    My videos RCIM is a private desktop application for Windows, owned and
+    operated only by its developer, an independent developer based in
+    France. It is not sold, licensed or distributed to anyone. It is used to
+    publish videos on YouTube channels owned by the developer, and on the
+    channels of content creators who authorize him to publish their own
+    videos. This publishing service is currently free of charge.
+  </p>
 
   <h2>Use of YouTube API Services</h2>
-  <p>My videos RCIM uses YouTube API Services to upload videos, set thumbnails and identify the connected YouTube channel. By using My videos RCIM, you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
-  <p>Data accessed through YouTube API Services is also handled in accordance with the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and our own <a href="privacy.html">Privacy Policy</a>.</p>
+  <p>
+    My videos RCIM uses YouTube API Services. By authorizing the application
+    to publish on your channel, you agree to be bound by the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+    Data accessed through YouTube API Services is handled in accordance with
+    the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+    and our <a href="privacy.html">Privacy Policy</a>.
+  </p>
+
+  <h2>Creators&rsquo; commitments</h2>
+  <p>A creator who authorizes the application to publish on their channel confirms that:</p>
+  <ul>
+    <li>they own the YouTube channel, or are allowed to manage it;</li>
+    <li>they own all rights to the videos they provide, including music, images and any other content in them;</li>
+    <li>their videos comply with the YouTube Terms of Service and the YouTube Community Guidelines.</li>
+  </ul>
+  <p>
+    Creators keep full ownership of their channels and of their videos. The
+    developer only publishes the videos that a creator has provided or
+    approved, on that creator&rsquo;s channel.
+  </p>
+  <p>
+    Some titles and descriptions may be drafted with the help of AI tools and
+    are reviewed before publishing. A creator can ask that no AI tool be used
+    for their videos. Details are given in the <a href="privacy.html">Privacy
+    Policy</a>.
+  </p>
 
   <h2>Google account authorization</h2>
-  <p>Each YouTube channel is connected to the application through Google OAuth 2.0. Authorization tokens are stored locally on the developer's computer only and are never shared with anyone.</p>
-  <p>Access can be revoked at any time from the <a href="https://security.google.com/settings/security/permissions">Google security settings page</a>. Once access is revoked, the application can no longer upload or manage videos on that channel.</p>
+  <p>
+    Each channel is connected through Google sign-in (OAuth 2.0), by its
+    owner. Authorization tokens are stored only on the developer&rsquo;s
+    computer and are never shared.
+  </p>
+  <p>
+    Access can be revoked at any time from the
+    <a href="https://security.google.com/settings/security/permissions">Google
+    security settings page</a>. Once access is revoked, the application can
+    no longer publish on that channel. A creator can also ask for the
+    deletion of their data, as described in the
+    <a href="privacy.html">Privacy Policy</a>.
+  </p>
 
-  <h2>Acceptable use</h2>
+  <h2>What the application does not do</h2>
   <ul>
-    <li>The application is only used to upload content that the channel owner has the right to publish.</li>
-    <li>All uploaded content must comply with the YouTube Terms of Service and YouTube Community Guidelines.</li>
-    <li>The application does not collect, analyze, sell or share data about YouTube users or viewers, and it is not used for advertising.</li>
+    <li>It does not collect, analyze, sell or share data about YouTube users or viewers.</li>
+    <li>It does not change or delete videos already on a channel.</li>
+    <li>It is not used for advertising.</li>
   </ul>
 
-  <h2>Data deletion</h2>
-  <p>Locally stored authorization tokens and settings can be deleted at any time by removing the channel from the application or by revoking access as described above. Deleting stored data stops all further access to the corresponding YouTube channel.</p>
+  <h2>Ending the service</h2>
+  <p>
+    A creator can stop the service at any time by revoking access or by
+    writing to the developer. The developer can also stop publishing on a
+    channel at any time, in particular if the content provided does not
+    comply with these terms or with YouTube&rsquo;s rules.
+  </p>
 
   <h2>No warranty</h2>
-  <p>The application is provided "as is", without warranty of any kind. The developer is not responsible for any interruption of YouTube API Services or for changes made by YouTube or Google.</p>
+  <p>
+    The service is provided &ldquo;as is&rdquo;, without warranty of any
+    kind. The developer is not responsible for interruptions of YouTube API
+    Services or for changes made by YouTube or Google.
+  </p>
 
   <h2>Changes to these terms</h2>
-  <p>These terms may be updated from time to time. The date at the top of this page shows when they were last changed.</p>
+  <p>
+    These terms may be updated. The date at the top of this page shows when
+    they were last changed.
+  </p>
 
   <h2>Contact</h2>
-  <p>For any question about these terms, write to <a href="mailto:alias.jack.id@gmail.com">alias.jack.id@gmail.com</a>.</p>
+  <p>
+    For any question about these terms:
+    <a href="mailto:alias.jack.id@gmail.com">alias.jack.id@gmail.com</a>.
+  </p>
 
   <footer>
-    <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="privacy.html">Privacy Policy</a>
+    <p class="liens">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>
+    </p>
+    <p>Contact: <a href="mailto:alias.jack.id@gmail.com">alias.jack.id@gmail.com</a></p>
   </footer>
-</main>
+
+</div>
 </body>
 </html>
