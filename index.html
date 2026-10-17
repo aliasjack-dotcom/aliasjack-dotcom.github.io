@@ -109,14 +109,17 @@
 
   <h2>What the application does</h2>
   <p>
-    My videos RCIM is a desktop application for Windows. It is installed on
-    a single computer and works on the video files stored there.
+    My videos RCIM is a set of private desktop tools for Windows, installed
+    on a single computer and working on the video files stored there: a clip
+    maker that turns long videos into short clips, and a scheduler (its
+    window is titled &ldquo;Planificateur Social&rdquo;) that publishes videos
+    on YouTube and on other platforms.
   </p>
   <ul>
     <li>The soundtrack is transcribed, with a timestamp for each word.</li>
     <li>The strongest passages are found and cut on complete sentences.</li>
     <li>Each clip is reframed to vertical format and subtitled. Titles and descriptions can be drafted with the help of AI tools, then reviewed before publishing.</li>
-    <li>Clips and ready-made videos are uploaded to the right YouTube channel at scheduled times.</li>
+    <li>Clips and ready-made videos are uploaded to the right YouTube channel, with a scheduled publication time, and can be added to a playlist of that channel.</li>
   </ul>
 
   <h2>Who uses it</h2>
@@ -136,9 +139,10 @@
   <p>
     My videos RCIM uses YouTube API Services. Only the publishing step needs
     an authorization, given by the owner of each channel through Google
-    sign-in. The application asks for two permissions: uploading a video to
-    the authorized channel, and reading that channel&rsquo;s basic
-    information to confirm where the upload went.
+    sign-in. The application asks for three permissions: uploading videos to
+    the authorized channel, reading that channel&rsquo;s basic information
+    and playlists, and managing playlists so that uploaded videos can be
+    added to them.
   </p>
   <p>
     It does not access any other data in the Google account, does not read

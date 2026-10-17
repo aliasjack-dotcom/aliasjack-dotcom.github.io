@@ -95,18 +95,27 @@
 
   <h2>Google data accessed</h2>
   <p>
-    When a channel owner signs in with Google, the application asks for two
+    When a channel owner signs in with Google, the application asks for three
     permissions, and only these:
   </p>
   <ul>
     <li>
       <code>https://www.googleapis.com/auth/youtube.upload</code>: upload
-      videos and set their thumbnails on the authorized channel.
+      videos (with a scheduled publication time) and set their thumbnails on
+      the authorized channel.
     </li>
     <li>
       <code>https://www.googleapis.com/auth/youtube.readonly</code>: read
-      the basic information of the authorized channel (name and channel ID),
-      to confirm where each upload goes and show its result.
+      the basic information of the authorized channel (name and channel ID)
+      and the list of its playlists, to confirm where each upload goes and
+      find the right playlist.
+    </li>
+    <li>
+      <code>https://www.googleapis.com/auth/youtube</code>: required by
+      YouTube to manage playlists. It is used only to create a playlist on
+      the authorized channel when it does not exist yet, and to add the
+      videos uploaded by the application to it. It is never used to edit or
+      delete existing videos, playlists, comments or any other content.
     </li>
   </ul>
   <p>
@@ -119,7 +128,8 @@
   <h2>How the data is used</h2>
   <p>
     These permissions are used only to publish, on the authorized channel,
-    the videos that the channel owner provided or approved for publication.
+    the videos that the channel owner provided or approved for publication,
+    and to add them to a playlist of that channel when requested.
     They are not used for anything else.
   </p>
 
